@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ChatBackend/ChatBackend.iml" filepath="$PROJECT_DIR$/ChatBackend/ChatBackend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Real-Time-Chat-Application.iml" filepath="$PROJECT_DIR$/.idea/Real-Time-Chat-Application.iml" />
+    </modules>
+  </component>
+</project>
