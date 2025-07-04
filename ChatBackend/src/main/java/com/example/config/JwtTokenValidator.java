@@ -28,7 +28,7 @@ public class JwtTokenValidator extends OncePerRequestFilter {
         String jwt = null;
 
         if (request.getCookies() != null) {
-            for (Cookie cookie : request.getCookies()) {
+            for (var cookie : request.getCookies()) {
                 if (cookie.getName().equals("jwt")) {
                     jwt = cookie.getValue();
                 }
