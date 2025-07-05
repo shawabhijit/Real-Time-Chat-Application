@@ -19,7 +19,7 @@ public class UserController {
     private final UserService userService;
 
     @GetMapping("/profile")
-    public ResponseEntity<User> getUserProfile (@CookieValue(name = "jwt" , required = false) String token) throws UserException {
+    public ResponseEntity<User> getUserProfile (@CookieValue(name = "token" , required = false) String token) throws UserException {
         User user = userService.findUserProfile(token);
         return ResponseEntity.accepted().body(user);
     }
@@ -31,7 +31,7 @@ public class UserController {
 
     @PutMapping("/update")
     public ResponseEntity<ApiResponse> updateUserHandler (@RequestBody UpdateUserRequest req ,
-                                                          @CookieValue(name = "jwt" , required = false) String token) throws UserException {
+                                                          @CookieValue(name = "token" , required = false) String token) throws UserException {
         User user = getUserProfile(token).getBody();
 
         assert user != null;

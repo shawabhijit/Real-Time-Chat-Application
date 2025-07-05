@@ -28,11 +28,10 @@ public class UserServiceImpl implements UserService {
     public User findUserProfile(String jwtToken) throws UserException {
         String email = tokenProvider.getEmailFromJwtToken(jwtToken);
         if (email != null) {
-            return userRepo.findByEmail(email)
-                    .orElseThrow(() -> new UserException("User not Found with the email :"+email));
+            return userRepo.findByEmail(email);
         }
         else {
-            throw new BadCredentialsException("Bad Credentials");
+            throw new BadCredentialsException("Bad Credentials , email not found.");
         }
     }
 
